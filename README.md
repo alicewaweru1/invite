@@ -1,21 +1,22 @@
-# Birthday Invitation (React + Vite + Tailwind)
+# Birthday Invitation (HTML + Python)
 
-This is a small React app that shows a friendly birthday invitation.
+This version uses a simple static HTML page and a small Python server so the invitation can run without needing React or Vite.
 
-Quick start
+## Run it
 
-1. Install dependencies
-
-```bash
-npm install
-```
-
-2. Run dev server
+1. Start the server
 
 ```bash
-npm run dev
+python app.py
 ```
 
-Notes
-- Update the WhatsApp number in `src/components/Invite.jsx` (constant `DEFAULT_WHATSAPP`) to your international phone number digits only (no + or dashes). The current value was sanitized from the number you provided.
-- To change the Instagram link, edit the anchor in `src/components/Invite.jsx`.
+2. Open the page in your browser
+
+```text
+http://localhost:8000
+```
+
+## Notes
+- Update the WhatsApp number in [index.html](index.html) if needed.
+- You can change the Instagram link in [index.html](index.html).
+- The RSVP code is generated automatically from the guest name.
