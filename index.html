@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b16" />
+    <meta name="color-scheme" content="dark light" />
     <title>You're Invited</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +20,7 @@
           linear-gradient(135deg, #fbf0f7 0%, #f7dfe9 45%, #fff8dd 100%);
         color: #5a2d52;
         overflow-x: hidden;
+        color-scheme: light dark;
       }
       .wrap {
         min-height: 100vh;
@@ -293,6 +296,87 @@
         .invite-layout { grid-template-columns: 1fr; }
         .sidebar { gap: 10px; }
       }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background:
+            radial-gradient(circle at top, rgba(53, 54, 79, 0.22), transparent 18%),
+            radial-gradient(circle at 80% 20%, rgba(62, 58, 94, 0.22), transparent 12%),
+            linear-gradient(135deg, #090b16 0%, #11162a 45%, #172144 100%);
+          color: #e7dff7;
+        }
+
+        .card {
+          background:
+            radial-gradient(circle at 15% 15%, rgba(120, 87, 147, 0.08) 0 1.4px, transparent 1.6px),
+            radial-gradient(circle at 85% 12%, rgba(102, 88, 134, 0.08) 0 1.4px, transparent 1.6px),
+            linear-gradient(180deg, rgba(12, 12, 26, 0.95), rgba(18, 18, 34, 0.95));
+          border-color: rgba(255, 255, 255, 0.08);
+          box-shadow:
+            0 24px 60px rgba(0, 0, 0, 0.55),
+            inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        }
+
+        .card::before {
+          border-color: rgba(255, 255, 255, 0.06);
+          box-shadow:
+            inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+            0 0 0 1px rgba(255, 255, 255, 0.02);
+        }
+
+        .card::after {
+          background:
+            radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 1.5%),
+            radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.06), transparent 1.2%),
+            radial-gradient(circle at 50% 80%, rgba(153, 110, 156, 0.08), transparent 9%);
+        }
+
+        input,
+        .btn-primary,
+        .btn-secondary,
+        .rspv-box,
+        .action-box,
+        .highlight-panel,
+        .social-links a,
+        #rsvpCode {
+          background: rgba(20, 20, 36, 0.8);
+          color: #e7dff7;
+          border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        input::placeholder {
+          color: #c2b4d6;
+        }
+
+        .welcome p,
+        .tagline,
+        .info-grid small,
+        .update-card p,
+        .update-card li,
+        .note,
+        .rspv-box small,
+        .section-title,
+        .center-title,
+        .section-title-center,
+        .update-card .section-title-center,
+        .update-card .update-alert,
+        .invite-main h2,
+        .invite-main .name {
+          color: #e7dff7;
+        }
+
+        .invite-main h2 { color: #f1d3ff; }
+        .invite-main .name { color: #f5aaf7; }
+        .update-card { background: linear-gradient(180deg, rgba(24, 21, 44, 0.96), rgba(31, 27, 58, 0.98)); }
+        .update-card .update-alert { background: linear-gradient(135deg, rgba(106, 76, 149, 0.95), rgba(76, 55, 124, 0.95)); color: #fff; }
+        .highlight-panel { background: rgba(34, 27, 50, 0.78); }
+        .social-links a { background: rgba(24, 20, 44, 0.78); }
+        .btn-primary { background: linear-gradient(90deg, #a95fa9, #8366cd); color: #fff; box-shadow: 0 10px 22px rgba(100, 52, 120, 0.35); }
+        .btn-secondary { background: linear-gradient(90deg, #7e5ea7, #5f67b5); color: #fff; box-shadow: 0 10px 18px rgba(50, 34, 75, 0.35); }
+        #noBtn { color: #e7dff7; border-color: rgba(255, 255, 255, 0.1); }
+        .note-right { color: #d4b5f3; }
+        .info-grid div strong { color: #f4e3ff; }
+      }
+
       @media (max-width: 600px) {
         .wrap { padding: 14px 10px; }
         .card { border-radius: 22px; }
